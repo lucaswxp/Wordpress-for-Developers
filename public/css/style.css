@@ -1,0 +1,4 @@
+@CHARSET "UTF-8";
+
+.wd-meta-box label {display:block;}
+.wd-meta-box input[type=text], .wd-meta-box select, .wd-meta-box input[type=password], .wd-meta-box textarea{width:99%; margin-top:5px;}

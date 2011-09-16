@@ -1,0 +1,6 @@
+[submodule "PHP-Form-Generator-Lib"]
+	path = PHP-Form-Generator-Lib
+	url = https://github.com/lucaswxp/PHP-Form-Generator-Lib
+[submodule "lib/Externals/Form"]
+	path = lib/Externals/Form
+	url = https://github.com/lucaswxp/PHP-Form-Generator-Lib
