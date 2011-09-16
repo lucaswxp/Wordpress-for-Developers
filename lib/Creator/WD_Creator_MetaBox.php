@@ -119,15 +119,6 @@ class WD_Creator_MetaBox extends WD_Creator_AbstractCreator {
 	}
 	
 /**
- * Echoes the self::render() returned value
- * 
- * @return string
- */
-	public function outputs(){
-		echo $this->render();
-	}
-	
-/**
  * Returns the added data
  * 
  * @return string

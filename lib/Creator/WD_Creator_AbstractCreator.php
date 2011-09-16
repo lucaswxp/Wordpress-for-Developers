@@ -6,21 +6,21 @@
  * @package WD.MetaBox
  */
 
-class WD_Creator_AbstractCreator{
+abstract class WD_Creator_AbstractCreator{
 	
 /**
  * Form data handler
  * 
  * @var FG_HTML_Form_DataHandler
  */
-	private $dataHandler;
+	protected $dataHandler;
 	
 /**
  * Save callback
  * 
  * @var array
  */
-	private $saveCallback;
+	protected  $saveCallback;
 	
 /**
  * Fields prefix
@@ -32,7 +32,7 @@ class WD_Creator_AbstractCreator{
 /**
  * Inits creator
  */
-	public function __construct($title){
+	public function __construct(){
 		$this->dataHandler = new FG_HTML_Form_DataHandler;
 		$this->saveCallback = array($this, 'saveFields');
 	}
@@ -63,6 +63,22 @@ class WD_Creator_AbstractCreator{
 			
 		return $this;
 	}
+	
+/**
+ * Echoes the self::render() returned value
+ * 
+ * @return string
+ */
+	public function outputs(){
+		echo $this->render();
+	}
+	
+/**
+ * Renders creator
+ * 
+ * @return self
+ */
+	abstract public function render();
 	
 /**
  * Inits creator

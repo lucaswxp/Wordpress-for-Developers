@@ -26,15 +26,6 @@ class WD_Creator_TaxonomyFieldsCreator extends WD_Creator_AbstractCreator {
 	}
 	
 /**
- * Echoes the self::render() returned value
- * 
- * @return string
- */
-	public function outputs(){
-		echo $this->render();
-	}
-	
-/**
  * Echoes the self::renderForEdit() returned value
  * 
  * @return string
@@ -49,6 +40,7 @@ class WD_Creator_TaxonomyFieldsCreator extends WD_Creator_AbstractCreator {
  * @return string
  */
 	public function render(){
+		$html = array();
 		foreach($this->dataHandler->getContent() as $content){
 			if(is_a($content, 'FG_HTML_Form_Input_Fillable')){
 				$html[] = Html::tag('div', $content)->setClass('form-field wd-taxonomy-fieldcreator');

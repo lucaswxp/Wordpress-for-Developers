@@ -37,13 +37,13 @@ class FunctionsTest extends WPTestCase{
  * test method
  */
 	public function testCreateMetaBoxCreatorObject(){
-		$this->assertInstanceOf('WD_MetaBox_Creator', wd_meta_box('My title'));
+		$this->assertInstanceOf('WD_Creator_MetaBox', wd_meta_box('My title'));
 	}
 	
 /**
  * test method
  */
 	public function testCreateTaxonomyFieldCreatorObject(){
-		$this->assertInstanceOf('WD_Taxonomy_FieldCreator', wd_taxonomy('taxonomyType'));
+		$this->assertInstanceOf('WD_Creator_TaxonomyFieldsCreator', wd_taxonomy('taxonomyType'));
 	}
 }
