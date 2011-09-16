@@ -20,7 +20,7 @@ abstract class WD_Creator_Page_AbstractPage extends WD_Creator_AbstractCreator {
  * 
  * @var string
  */
-	protected $submitText = null;
+	protected $submitText;
 	
 /**
  * Menu title
@@ -34,7 +34,7 @@ abstract class WD_Creator_Page_AbstractPage extends WD_Creator_AbstractCreator {
  * 
  * @var string
  */
-	protected $successMessage = 'Settings saved';
+	protected $successMessage;
 	
 /**
  * Page ID (slug)
@@ -59,6 +59,8 @@ abstract class WD_Creator_Page_AbstractPage extends WD_Creator_AbstractCreator {
 		$this->pageTitle = $title;
 		$this->menuTitle = $title;
 		$this->id  = sanitize_title($title);
+		$this->successMessage = __('Settings saved.');
+		$this->submitText = __('Save Changes');
 		parent::__construct();
 	}
 
@@ -149,12 +151,7 @@ abstract class WD_Creator_Page_AbstractPage extends WD_Creator_AbstractCreator {
 		}
 		$html[] = '</tboy></table>';
 		
-		$submit = new FG_HTML_Form_Input_Submit();
-		
-		if(!is_null($this->submitText))
-			$submit->setValue($this->submitText);
-			
-		$html[] = $submit->setClass('button-primary');
+		$html[] = Form::submit($this->submitText)->setClass('button-primary');
 		$html[] = '</form>';
 		
 		
