@@ -31,10 +31,9 @@ abstract class WD_Helper_AbstractHelper {
  * ->get('userdata_name', $post->ID);
  * 
  * @param string $fieldName
- * @param int $relatedID
  * @return mixed
  */
-	abstract public function get($fieldName, $relatedID = null);
+	abstract public function get($fieldName);
 	
 /**
  * Checks if the returned value for ->get($fieldName) is empty

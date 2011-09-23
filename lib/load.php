@@ -39,6 +39,9 @@ define('WD_BASE_URL', get_bloginfo('url') . '/wp-content/WD');
 	// taxonomy functions
 	require_once dirname(__FILE__) . '/functions/taxonomy.php';
 	
+	// pages functions
+	require_once dirname(__FILE__) . '/functions/pages.php';
+	
 	// form external
 	require_once dirname(__FILE__) . '/Externals/Form/fg/load.php';
 	
