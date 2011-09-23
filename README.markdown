@@ -11,7 +11,6 @@ If you put the library in the wp-content dir, you can load it by the following w
 ```php
 <?php
 include_once(WP_CONTENT_DIR . '/WD/lib/load.php');
-?>
 ```
 
 Adding a meta box
@@ -35,9 +34,11 @@ function register_meta_boxes(){
 add_action('admin_init', 'register_meta_boxes');
 ```
 See how the UI looks like:
+
 ![Meta box](http://img705.imageshack.us/img705/7285/metabox.jpg)
 
 You can get information of a post by the following way:
+
 ```php
 <?php
 // get
@@ -65,7 +66,6 @@ while(have_posts()): the_post()
 		echo 'My extra option: '; wd_mb()->theMyExtraOption(); // prints
 	}
 endwhile;
-?>
 ```
 
 Adding extra taxonomy fields
@@ -79,9 +79,11 @@ wd_taxonomy('category') // which taxonomy you wanna affect
 ```
 
 See how the UI looks like:
+
 ![Meta box](http://img830.imageshack.us/img830/7762/taxa.jpg)
 
 To get data from a term:
+
 ```php
 <?php
 // get
@@ -92,7 +94,6 @@ wd_tax()->theAuthorBox($termID); // or wd_tax()->the('order', $termID);
 
 // check if is empty
 wd_tax()->isExtraInfoEmpty($termID); // or wd_tax()->isEmpty('extra_info', $termID);
-?>
 ```
 
 Creating admin menus
@@ -112,7 +113,6 @@ function register_admin_pages(){
 		->init();
 }
 add_action('_admin_menu', 'register_admin_pages'); // the hook _admin_menu happens before the admin_menu hook
-?>
 ```
 
 See how the UI looks like:
@@ -120,6 +120,7 @@ See how the UI looks like:
 ![Meta box](http://img855.imageshack.us/img855/4408/pageoptions.jpg)
 
 To get data from a page option:
+
 ```php
 <?php
 // get
@@ -130,5 +131,4 @@ wd_opt()->theVideoLimit(); // or wd_opt()->the('video_limit');
 
 // check if is empty
 wd_opt()->isYoutubeLinkEmpty(); // or wd_opt()->isEmpty('youtube_link');
-?>
 ```
