@@ -7,6 +7,7 @@ This library has the goal of make simple the creation of CRUD elements in wordpr
 Loading library
 ===============
 If you put the library in the wp-content dir, you can load it by the following way:
+
 ```php
 <?php
 include_once(WP_CONTENT_DIR . '/WD/lib/load.php');
@@ -115,6 +116,7 @@ add_action('_admin_menu', 'register_admin_pages'); // the hook _admin_menu happe
 ```
 
 See how the UI looks like:
+
 ![Meta box](http://img855.imageshack.us/img855/4408/pageoptions.jpg)
 
 To get data from a page option:
