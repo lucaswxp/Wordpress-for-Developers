@@ -20,7 +20,7 @@ jQuery(function($){
 		
 			// remove meta box
 
-			if($metaBox.find(':text:not(:hidden)').size() == totalSubtitles){
+			if($metaBox.find(':input:not(:hidden)').size() == totalSubtitles){
 				$metaBox.hide();
 			}
 
