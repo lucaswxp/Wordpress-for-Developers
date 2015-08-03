@@ -1,6 +1,8 @@
+> This repository han'st been updated for 4+ year now, but all components still work flawlessly. I just don't have time to mantain and add new functionality anymore. 
+
 Goal
 ============
-This library has the goal of make simple the creation of CRUD elements in wordpress, such as meta boxes, extra fields in terms and option pages.
+Make simple the creation of CRUD elements in wordpress, such as meta boxes, extra fields in terms and option pages.
 
 
 
