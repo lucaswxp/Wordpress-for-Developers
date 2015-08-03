@@ -1,4 +1,4 @@
-> This repository han'st been updated for 4+ year now, but all components still work flawlessly. I just don't have time to mantain and add new functionality anymore. 
+> This repository hasn't been updated for 4+ year now, but all components still work flawlessly. I just don't have time to mantain and add new functionality anymore. 
 
 Goal
 ============
@@ -35,9 +35,6 @@ function register_meta_boxes(){
 }
 add_action('admin_init', 'register_meta_boxes');
 ```
-See how the UI looks like:
-
-![Meta box](http://img705.imageshack.us/img705/7285/metabox.jpg)
 
 You can get information of a post by the following way:
 
@@ -80,9 +77,6 @@ wd_taxonomy('category') // which taxonomy you wanna affect
 	->init();
 ```
 
-See how the UI looks like:
-
-![Meta box](http://img830.imageshack.us/img830/7762/taxa.jpg)
 
 To get data from a term:
 
@@ -116,10 +110,6 @@ function register_admin_pages(){
 }
 add_action('_admin_menu', 'register_admin_pages'); // the hook _admin_menu happens before the admin_menu hook
 ```
-
-See how the UI looks like:
-
-![Meta box](http://img855.imageshack.us/img855/4408/pageoptions.jpg)
 
 To get data from a page option:
 
